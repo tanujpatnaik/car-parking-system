@@ -7,4 +7,4 @@ In the entrance of the parking system, there is a sensor which is activated to d
 ##Implementation
 ![Screenshot 2025-06-26 190308](https://github.com/user-attachments/assets/b0d1f4ad-40e9-4f63-800d-d0f87f42e1a7)
 ## Simulation Result
-![Screenshot 2025-06-26 202346](https://github.com/user-attachments/assets/db517d22-fd58-42f0-b46d-70e89dd64485)
+<img width="1458" height="386" alt="Screenshot 2025-07-14 230316" src="https://github.com/user-attachments/assets/e6384a7a-5cf5-47bb-8653-52fb8dc04179" />
