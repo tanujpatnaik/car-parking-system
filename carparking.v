@@ -76,32 +76,32 @@ module parking_system(clk,reset,sensor_entrance,sensor_exit,password_1,password_
  IDLE: begin
  green_tmp = 1'b0;
  red_tmp = 1'b0;
- HEX_1 = 7'b1111111; // off
- HEX_2 = 7'b1111111; // off
+ HEX_1 = 7'b0000000; // off
+ HEX_2 = 7'b0000000; // off
  end
  WAIT_PASSWORD: begin
  green_tmp = 1'b0;
  red_tmp = 1'b1;
- HEX_1 = 7'b000_0110; // E
- HEX_2 = 7'b010_1011; // n (EN means enter)
+ HEX_1 = 7'b1001111; // E
+ HEX_2 = 7'b0010101; // n (EN means enter)
  end
  WRONG_PASS: begin
  green_tmp = 1'b0;
  red_tmp = ~red_tmp;
- HEX_1 = 7'b000_0110; // E
- HEX_2 = 7'b000_0110; // E (EE means error entered)
+ HEX_1 = 7'b1001111; // E
+ HEX_2 = 7'b1001111; // E (EE means error entered)
  end
  RIGHT_PASS: begin
  green_tmp = ~green_tmp;
  red_tmp = 1'b0;
- HEX_1 = 7'b000_0010; 
- HEX_2 = 7'b100_0000; //means go 
+ HEX_1 = 7'b1011111; 
+ HEX_2 = 7'b1111110; //means go 
  end
  STOP: begin
  green_tmp = 1'b0;
  red_tmp = ~red_tmp;
- HEX_1 = 7'b001_0010; 
- HEX_2 = 7'b000_1100; //means stop 
+ HEX_1 = 7'b0010010; 
+ HEX_2 = 7'b0001100; //means stop 
  end
  endcase
  end
